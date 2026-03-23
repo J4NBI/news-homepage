@@ -1,2 +1,1 @@
-# news-homepage
-Created with CodeSandbox
+https://j4nbi.github.io/news-homepage/
