@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>News Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          colors: {
+            primary: "hsl(35, 77%, 62%)",
+            secondary: "hsl(5, 85%, 63%)",
+            offWhite: "hsl(36, 100%, 99%)",
+            grayBlue: "hsl(233, 8%, 79%)",
+            darkBlue: "hsl(236, 13%, 42%)",
+            veryDarkBlue: "hsl(240, 100%, 5%)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .swipe {
+      animation: swipeIn 1.5s ease forwards;
+    }
+
+    @keyframes swipeIn {
+      0% {
+        right: -100%;
+      }
+      100% {
+        right: 0%;
+      }
+    }
+
+    .swipeClose {
+      animation: swipeOut 1.5s ease forwards;
+    }
+
+    @keyframes swipeOut {
+      0% {
+        right: 0%;
+      }
+      100% {
+        right: -100%;
+      }
+    }
+  </style>
+  <body class="bg-offWhite m-4">
+    <nav class="navbar flex items-center justify-between">
+      <img src="./images/logo.svg" alt="" />
+      <div
+        class="menue-nav hidden swipe bg-stone-100 md:bg-transparent p-12 absolute right-0 top-14 swipe flex md:gap-8 md:top-0 w-1/2 md:w-auto md:p-0 md:static flex-col gap-4 md:flex-row md:self-end"
+      >
+        <a class="text-stone-600 hover:text-black hover:font-bold" href="#body"
+          >Home</a
+        >
+        <a
+          class="text-stone-600 hover:scale-105 hover:text-black hover:font-bold"
+          href="#new"
+          >New</a
+        >
+        <a
+          class="text-stone-600 hover:scale-105 hover:text-black hover:font-bold"
+          href="#popular"
+          >Popular</a
+        >
+        <a
+          class="text-stone-600 hover:scale-105 hover:text-black hover:font-bold"
+          href="#body"
+          >Trending</a
+        >
+        <a
+          class="text-stone-600 hover:scale-105 hover:text-black hover:font-bold"
+          href="#body"
+          >Categories</a
+        >
+      </div>
+      <button class="menue-btn md:hidden" aria-label="Open Menue">
+        <img class="menue-img" src="./images/icon-menu.svg" alt="" />
+      </button>
+    </nav>
+    <main>
+      <div
+        class="grid lg:grid-cols-[65%_35%] grid-rows-[auto_auto_auto_auto] md:mt-12 max-w-[1180px] mx-auto"
+      >
+        <div
+          class="bg-[url('./images/image-web-3-mobile.jpg')] md:bg-[url('./images/image-web-3-desktop.jpg')] bg-cover bg-center h-[300px] md:h-[400px] md:mt-0 mt-12"
+        ></div>
+        <div
+          class="lg:row-start-1 md:row-span-3 lg:col-start-2 md:h-full lg:row-span-2 row-start-3"
+        >
+          <div id="new" class="bg-veryDarkBlue mt-12 md:mt-0 h-full md:mx-8">
+            <div class="px-5 py-6">
+              <h2 class="text-primary text-3xl font-semibold">New</h2>
+              <div>
+                <h3 class="text-white/80 mt-8 text-xl font-semibold">
+                  Hydrogen VS Electric Cars
+                </h3>
+                <p class="text-white/40 text-md leading-relaxed mt-1">
+                  Will hydrogen-fueled cars ever catch up to EVs?
+                </p>
+                <hr class="border-white/40 my-8" />
+              </div>
+              <div>
+                <h3 class="text-white/80 mt-8 text-xl font-semibold">
+                  The Downsides of Al Artistry
+                </h3>
+                <p class="text-white/40 text-md leading-relaxed mt-1">
+                  What are the possible adverse effects of on-demand Al image
+                  generation?
+                </p>
+                <hr class="border-white/40 my-8" />
+              </div>
+              <div>
+                <h3 class="text-white/80 mt-8 text-xl font-semibold">
+                  Is VC Funding Drying Up?
+                </h3>
+                <p class="text-white/40 text-md leading-relaxed mt-1">
+                  Private funding by VC firms is down 50% YOY. We take a look at
+                  what that means.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="h-full flex md:flex-row flex-col">
+          <h1
+            class="max-w-[90%] row-start-2 flex-1 min-w-[300px] md:leading-[55px] font-extrabold text-5xl mt-8 md:mt-0 md:mt-4 md:pr-8"
+          >
+            The Bright Future of Web 3.0?
+          </h1>
+
+          <div>
+            <p
+              class="text-black/60 mt-6 py-4 md:mt-0 leading-relaxed max-w-[90%]"
+            >
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fullfilling its promise?
+            </p>
+            <button
+              class="mt-8 md:mt-2 bg-secondary tracking-[4px] font-extrabold px-8 py-3 text-md"
+            >
+              READ MORE
+            </button>
+          </div>
+        </div>
+        <div id="popular" class="mt-16 md:col-span-2">
+          <div
+            class="grid grid-cols-1 md:grid-cols-[auto_auto] lg:md:grid-cols-[auto_auto_auto] gap-8 md:gap-2 lg:gap-0"
+          >
+            <!-- Card 1 -->
+            <div class="grid grid-cols-[auto_1fr] items-center gap-4">
+              <img
+                class="w-[100px]"
+                src="./images/image-retro-pcs.jpg"
+                alt="retro pc"
+              />
+
+              <div class="self-center">
+                <h4 class="text-secondary font-bold text-4xl mb-2">01</h4>
+                <h5 class="text-md font-extrabold mb-2">Reviving Retro PCs</h5>
+                <p class="text-black/60 md:max-w-[80%]">
+                  What happens when old PCs are given modern upgrades?
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="grid grid-cols-[auto_1fr] gap-4">
+              <img
+                class="w-[100px]"
+                src="./images/image-top-laptops.jpg"
+                alt="laptops"
+              />
+
+              <div>
+                <h4 class="text-secondary font-bold text-4xl mb-2">02</h4>
+                <h5 class="text-md font-extrabold mb-2">
+                  Top 10 Laptops of 2022
+                </h5>
+                <p class="text-black/60 md:max-w-[80%]">
+                  Our best picks for various needs and budgets.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="grid grid-cols-[auto_1fr] gap-4">
+              <img
+                class="w-[100px]"
+                src="./images/image-gaming-growth.jpg"
+                alt="gaming"
+              />
+
+              <div>
+                <h4 class="text-secondary font-bold text-4xl mb-2">03</h4>
+                <h5 class="text-md font-extrabold mb-2">
+                  The Growth of Gaming
+                </h5>
+                <p class="text-black/60 md:max-w-[80%]">
+                  How the pandemic has sparked fresh opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js" defer></script>
+  </body>
+</html>
